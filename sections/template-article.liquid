@@ -47,7 +47,7 @@
 </article>
 
 {% if blog.comments_enabled? %}
-    <div id="comment" class="my-8">
+    <div id="comments" class="my-8">
         {% if article.comments_count > 0 %}
             <div class="flex-1 items-center justify-center mx-auto max-w-4xl px-4">
                 <h1 class="text-lg mb-4 font-medium">
@@ -55,16 +55,12 @@
                 </h1>
 
                 {% paginate article.comments by 5 %}
-                    {% for comment in comment.article %}
+                    {% for comment in article.comments %}
                         <div class="flex-1 border my-4 px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
-                            <span class="comment-auhtor">{{comment.author}}</span> <span class="text-xs text-gray-400">{{ comment.created_at | date: format: 'default' }}</span>
+                            <span class="comment-author">{{ comment.author }}</span> <span class="text-xs text-gray-400">{{ comment.created_at | date: format: 'default' }}</span>
                             <p class="text-sm">{{ comment.content }}</p>
                         </div>
                     {% endfor %}
-                    {% comment %} {% if paginate.pages > 1 %}
-                        {{ paginate |  default_pagination }}
-                    {% endif %} {% endcomment %}
-
                     <div class="max-w-6xl mx-auto">
                         {% render 'pagination', pagination: paginate %}
                     </div>
@@ -77,6 +73,7 @@
         {% endif %}
     </div>
 
+     
     <div id="comment_form" class="mb-8">
         {% form 'new_comment', article %}
             <div class="flex-1 mx-auto items-center justify-center max-w-4xl px-4">
@@ -93,7 +90,7 @@
                         <ul class="px-4 mb-3 ml-? list-decimal">
                             {% for error in form.errors %}
                                 <li>
-                                    <span>{{ form.errors.messsages[error] }}</span>
+                                    <span>{{ form.errors.messages[error] }}</span>
                                 </li>
                             {% endfor %}
                         </ul>
@@ -131,7 +128,7 @@
                 </div>
                 <div class="px-1 md:flex mb-3">
                     <div class="md:w-full px-3">
-                        <input type="submiy" class="w-full cursor-pointer px-4 py-2 border text-base font-medium text-white bg-gray-900 hover:bg-gray-500" value="Post comment">
+                        <input type="submit" class="w-full cursor-pointer px-4 py-2 border text-base font-medium text-white bg-gray-900 hover:bg-gray-500" value="Post comment">
                     </div>
                 </div>
             </div>
