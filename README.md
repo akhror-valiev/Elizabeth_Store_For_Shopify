@@ -41,8 +41,11 @@ If you don't have Shopify CLI installed to your computer, navigate to the [insta
 
 npm install
 
+```sh
 run shopify theme dev
-
+```
 in separate terminal run
 
+```sh
 npx tailwindcss -i ./src/tailwind.css -o .\assets\application.css --watch
+```
