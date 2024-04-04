@@ -49,3 +49,9 @@ in separate terminal run
 ```sh
 npx tailwindcss -i ./src/tailwind.css -o .\assets\application.css --watch
 ```
+
+![11](https://github.com/akhror-valiev/Elizabeth_Store_For_Shopify/assets/78090048/e84cefd7-fb78-45d9-b915-4f29e38837b7)
+![333](https://github.com/akhror-valiev/Elizabeth_Store_For_Shopify/assets/78090048/86e671af-fa2d-466d-a550-21716a9a4ad4)
+![44](https://github.com/akhror-valiev/Elizabeth_Store_For_Shopify/assets/78090048/f0df9a36-d4c5-45f1-935f-687d396f21a2)
+![223](https://github.com/akhror-valiev/Elizabeth_Store_For_Shopify/assets/78090048/6875937d-5cd3-46bd-9282-a1fc913ad981)
+![55](https://github.com/akhror-valiev/Elizabeth_Store_For_Shopify/assets/78090048/cd2961d0-31e7-42d2-9a79-063387d3099f)
