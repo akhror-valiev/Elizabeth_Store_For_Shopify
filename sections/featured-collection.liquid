@@ -7,7 +7,7 @@
                 {% render "product-card", product_product: product %}
             {% else %}
                 {% for item in (1..4) %}
-                    {% render, "product-card-placeholder" %}
+                    {% render "product-card-placeholder" %}
                 {% endfor %}
             {% endfor %}
         </div>
@@ -46,4 +46,13 @@
             }
         ]
 }
-{% endschema %}
+{% endschema %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% render, "product-card-placeholder" %}'
+  to: '{% render "product-card-placeholder" %}'
+  position: 498..537
+{%- endcomment -%}
